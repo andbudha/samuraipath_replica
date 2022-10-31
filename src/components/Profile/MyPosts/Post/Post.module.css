@@ -1,0 +1,10 @@
+
+.item {
+    color: blueviolet;
+}
+
+.item img {
+    width: 45px;
+    background-color: gold;
+    border-radius: 100%;
+}
