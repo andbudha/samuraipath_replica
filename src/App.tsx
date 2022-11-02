@@ -10,8 +10,11 @@ function App() {
         <div className={'app-wrapper'}>
             <Header/>
             <Navbar/>
-            <Profile/>
-            <Dialogues/>
+            <div className={'app-wrapper-content'}>
+                { /*<Profile/>*/}
+                <Dialogues/>
+            </div>
+
         </div>
     );
 }

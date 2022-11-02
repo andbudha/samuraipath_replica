@@ -10,8 +10,13 @@
     grid-gap: 3px;
 }
 
+.app-wrapper-content {
+    grid-area: c;
+    background-color: lightgoldenrodyellow;
+}
 
-
-
+.app-wrapper-content img {
+    width: 100%;
+}
 
 
