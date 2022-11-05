@@ -2,7 +2,12 @@ import React from 'react';
 import classes from './Profile.module.css';
 import MyPosts from "./MyPosts/MyPosts";
 
-const Profile = () => {
+type ProfilePropsType = {
+    message: string
+}
+
+
+const Profile: React.FC<ProfilePropsType>=(props) => {
     return (
         <>
             <div className={classes.content}>
@@ -11,6 +16,9 @@ const Profile = () => {
                 </div>
                 <div>
                     avatar+description
+                    <br/>
+                    {props.message}
+                    <br/>
                 </div>
                 <MyPosts/>
             </div>
