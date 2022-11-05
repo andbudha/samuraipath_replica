@@ -13,7 +13,7 @@ function App() {
                 <Header/>
                 <Navbar/>
                 <div className={'app-wrapper-content'}>
-                    <Route path={'/profile'} render={()=><Profile message={'Hi, I am in the App.tsx'}/>}/>
+                    <Route path={'/profile'} component={Profile}/>
                     <Route path={'/dialogues'} component={Dialogues}/>
                 </div>
             </div>
