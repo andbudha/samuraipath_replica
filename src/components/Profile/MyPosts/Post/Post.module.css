@@ -8,3 +8,11 @@
     background-color: gold;
     border-radius: 100%;
 }
+
+.item p {
+    color: chocolate;
+}
+
+.item span {
+    color: black;
+}
