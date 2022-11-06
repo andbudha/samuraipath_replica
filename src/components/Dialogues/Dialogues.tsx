@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 //subcomponents
 type DialogueItemPropsType = {
-    id: string
+    id: number
     name: string
 }
 const DialogueItem: React.FC<DialogueItemPropsType> =(props)=> {
@@ -19,6 +19,7 @@ const DialogueItem: React.FC<DialogueItemPropsType> =(props)=> {
 
 type MessagePropsType = {
     message: string
+    id: number
 }
 const Message: React.FC<MessagePropsType> = (props) => {
     return(
@@ -26,20 +27,35 @@ const Message: React.FC<MessagePropsType> = (props) => {
     );
 }
 
+
+let dialoguesData = [
+    {id: 1, name: 'Andrei'},
+    {id: 2, name: 'Delia'},
+    {id: 3, name: 'Natalia'},
+    {id: 4, name: 'Dorian'}
+]
+
+let messageData = [
+    {id: 1, message: 'Hi there...'},
+    {id: 2, message: 'How is your it-kamasutra?'},
+    {id: 3, message: 'What\'s up?'},
+    {id: 4, message: 'Hi there again'}
+]
 //main component
 const Dialogues = () => {
     return (
         <div className={classes.dialogues}>
             <div className={classes.dialogue_items}>
-                <DialogueItem name={'Andrei'} id={'1'}/>
-                <DialogueItem name={'Delia'} id={'2'}/>
-                <DialogueItem name={'Natalia'} id={'3'}/>
-                <DialogueItem name={'Dorian'} id={'4'}/>
+                <DialogueItem name={dialoguesData[0].name} id={dialoguesData[0].id}/>
+                <DialogueItem name={dialoguesData[1].name} id={dialoguesData[1].id}/>
+                <DialogueItem name={dialoguesData[2].name} id={dialoguesData[2].id}/>
+                <DialogueItem name={dialoguesData[3].name} id={dialoguesData[3].id}/>
             </div>
             <div className={classes.messages}>
-                <Message message={'Hi there...'}/>
-                <Message message={'How is your it-kamasutra?'}/>
-                <Message message={'What\'s up?'}/>
+                <Message message={messageData[0].message} id={messageData[0].id}/>
+                <Message message={messageData[1].message} id={messageData[1].id}/>
+                <Message message={messageData[2].message} id={messageData[2].id}/>
+                <Message message={messageData[3].message} id={messageData[3].id}/>
             </div>
         </div>
     );
