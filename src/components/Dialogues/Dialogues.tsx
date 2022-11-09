@@ -1,18 +1,7 @@
 import React from 'react';
 import classes from "./Dialogues.module.css";
 import DialogueItem from "./DialogueItem/DialogueItem";
-
-
-
-type MessagePropsType = {
-    message: string
-    id: number
-}
-const Message: React.FC<MessagePropsType> = (props) => {
-    return(
-        <div className={classes.message}>{props.message}</div>
-    );
-}
+import Message from "./Message/Message";
 
 
 let dialogueData = [
