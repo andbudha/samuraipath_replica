@@ -2,31 +2,20 @@ import React from 'react';
 import classes from "./Dialogues.module.css";
 import DialogueItem from "./DialogueItem/DialogueItem";
 import Message from "./Message/Message";
+import {DialoguesType, MessagesType} from "../../index";
 
 
-let dialogueData = [
-    {id: 1, name: 'Andrei'},
-    {id: 2, name: 'Delia'},
-    {id: 3, name: 'Natalia'},
-    {id: 4, name: 'Dorian'}
-]
 
-let dialogueElements = dialogueData
-    .map(d => <DialogueItem name={d.name} id={d.id}/>
-    );
-
-
-let messageData = [
-    {id: 1, message: 'Hi there...'},
-    {id: 2, message: 'How is your it-kamasutra?'},
-    {id: 3, message: 'What\'s up?'},
-    {id: 4, message: 'Hi there again'}
-]
-
-let messageElements = messageData
-    .map(m=> <Message message={m.message} id={m.id}/>)
 //main component
-const Dialogues = () => {
+const Dialogues = (props: DialoguesType & MessagesType) => {
+
+    let dialogueElements = props.dialogues
+        .map(d => <DialogueItem name={d.name} id={d.id}/>
+        );
+
+    let messageElements = props.messages
+        .map(m=> <Message message={m.message} id={m.id}/>)
+
     return (
         <div className={classes.dialogues}>
             <div className={classes.dialogue_items}>
