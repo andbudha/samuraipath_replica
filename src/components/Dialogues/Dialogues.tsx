@@ -19,11 +19,11 @@ const Dialogues = (props: DialoguesPropsType) => {
 
     return (
         <div className={classes.dialogues}>
-            <div className={classes.dialogue_items}>
-                {dialogueElements}
-            </div>
             <div className={classes.messages}>
                 {messageElements}
+            </div>
+            <div className={classes.dialogue_items}>
+                {dialogueElements}
             </div>
         </div>
     );
